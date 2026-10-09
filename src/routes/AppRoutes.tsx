@@ -1,0 +1,18 @@
+import {Navigate, Route, Routes} from "react-router-dom";
+
+import Home from "../pages/Home/Home";
+import Eventos from "../pages/Eventos/Eventos";
+import DetalhesEvento from "../pages/DetalhesEvento/DetalhesEvento";
+
+function AppRoutes() {
+    return (
+        <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/eventos" element={<Eventos />} />
+            <Route path= "/eventos" element= {<DetalhesEvento/>}/>
+            <Route path="*" element={<Navigate to="/home" />} />
+        </Routes>
+    )
+}
+
+export default AppRoutes;
